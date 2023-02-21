@@ -1,9 +1,9 @@
 /**
- * This class initializes stock variables and conatains methods used to buy
+ * This class initializes StockHolding objects and contains methods used to buy
  * and sell shares of a stock.
  *
  * @author (Noah Demarco, Brendan Ortlieb)
- * @version (2/21/2023 Problem set 2)
+ * @version (2/21/2023, Spring 2023)
  */
 public class StockHolding
 {
@@ -58,7 +58,7 @@ public class StockHolding
             this.numShares -= numShares;
             return this.price * numShares;
         }
-        return 0.00;
+        return 0;
     }
     
     @Override

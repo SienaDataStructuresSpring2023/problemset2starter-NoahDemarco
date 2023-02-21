@@ -8,8 +8,8 @@ import java.io.FileNotFoundException;
  * accordingly.  Then, this program prints the portfolio report
  * as described in the problem set 2 instructions.
  *
- * @author 
- * @version 
+ * @author (Brendan Ortlieb, Noah Demarco)
+ * @version (2/21/23, Spring 2023)
  */
 public class PortfolioReport
 {
