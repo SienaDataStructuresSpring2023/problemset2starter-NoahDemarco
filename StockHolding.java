@@ -6,16 +6,23 @@
  */
 public class StockHolding
 {
-    private String stockName;
-    private String stockSymbol;
-    private int shares;
-    private double pricePerShare;
+    private String name;
+    private String symbol;
+    private int numShares;
+    private double price;
     
-    // @Override
-    // public String toString()
-    // {
-        // //DO NOT EDIT THIS METHOD.
-        // return String.format("%6s%25s%,10d  $%,12.2f  $%,12.2f%n", 
-        // symbol, name, numShares, price, numShares * price); 
-    // }
+    public StockHolding(String symbol, String name, int shares, double price) {
+        this.symbol = symbol;
+        this.name = name;
+        this.numShares = numShares;
+        this.price = price;
+    }
+    
+    @Override
+    public String toString()
+     {
+         //DO NOT EDIT THIS METHOD.
+         return String.format("%6s%25s%,10d  $%,12.2f  $%,12.2f%n", 
+         symbol, name, numShares, price, numShares * price); 
+     }
 }
