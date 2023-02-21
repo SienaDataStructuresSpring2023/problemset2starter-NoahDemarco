@@ -11,11 +11,27 @@ public class StockHolding
     private int numShares;
     private double price;
     
-    public StockHolding(String symbol, String name, int shares, double price) {
+    public StockHolding(String symbol, String name, int numShares, double price) {
         this.symbol = symbol;
         this.name = name;
         this.numShares = numShares;
         this.price = price;
+    }
+    
+    public String getSymbol() {
+        return symbol;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getNumShares() {
+        return numShares;
+    }
+
+    public double getPrice() {
+        return price;
     }
     
     @Override
