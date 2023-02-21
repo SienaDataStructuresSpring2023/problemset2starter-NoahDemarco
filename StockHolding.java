@@ -34,6 +34,11 @@ public class StockHolding
         return price;
     }
     
+    public void byShares(int numShares, double price){
+        this.price = (this.price * this.numShares + numShares * price);
+        this.numShares += numShares;
+    }
+    
     @Override
     public String toString()
      {
