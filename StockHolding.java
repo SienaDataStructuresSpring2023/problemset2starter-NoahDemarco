@@ -1,8 +1,9 @@
 /**
- * Write a description of class Asset here.
+ * This class initializes stock variables and conatains methods used to buy
+ * and sell shares of a stock.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Noah Demarco, Brendan Ortlieb)
+ * @version (2/21/2023 Problem set 2)
  */
 public class StockHolding
 {
@@ -34,9 +35,30 @@ public class StockHolding
         return price;
     }
     
-    public void byShares(int numShares, double price){
-        this.price = (this.price * this.numShares + numShares * price);
+    /**
+     * Updates the number of shares the user has, based off if and how many
+     * were purchased.
+     * 
+     * @param numShares
+     * @param price
+     */
+    
+    public void buyShares(int numShares, double price){
         this.numShares += numShares;
+    }
+    
+    /**
+     * returns the dollar amount resulting from the sale of shares.
+     * 
+     * @param numShares
+     * @return returns the dollar amount resulting from the sale of shares.
+     */
+    public double sellShares(int numShares){
+        if (this.numShares >= numShares){
+            this.numShares -= numShares;
+            return this.price * numShares;
+        }
+        return 0.00;
     }
     
     @Override
