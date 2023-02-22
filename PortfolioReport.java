@@ -31,10 +31,10 @@ public class PortfolioReport
             String[] data = line.split(",");
             if(data[0].equals("B")){
                 //Buy the stock for the portfolio.
-                //YOUR CODE HERE.
+                p.buyStock("B", "Tesla", 10, 27.50);
             } else {
                 //Sell the stock from the portfolio.
-                //YOUR CODE HERE.
+                p.sellStock("C", 5);
             }
         }
 
@@ -42,8 +42,8 @@ public class PortfolioReport
         System.out.println();
         
         // Uncomment the lines of code below and complete the print statements to work as intended.
-        // System.out.println(String.format("      Current Value:  $%,15.2f", //YOUR CODE HERE.));
-        // System.out.println(String.format("Lifetime Investment:  $%,15.2f", //YOUR CODE HERE.));
-        // System.out.println(String.format("    Lifetime Payout:  $%,15.2f", //YOUR CODE HERE.));
+        System.out.println(String.format("      Current Value:  $%,15.2f", p.getCurrentValue()));
+        System.out.println(String.format("Lifetime Investment:  $%,15.2f", p.getInvestment()));
+        System.out.println(String.format("    Lifetime Payout:  $%,15.2f", p.getPayout()));
     }
 }
